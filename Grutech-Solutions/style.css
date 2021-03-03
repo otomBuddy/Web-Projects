@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color:rgba(187,187,187,0.2);
+}
+
+.logo{
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+   text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;  
+}
+
+img{
+    width: 100%;
+}
+
+
+/*navbar*/
+.navbar{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;  
+
+}
+/*showcase*/
+.showcase{
+    height: 400px;
+    background-color: #047aed;
+    color: #fff;
+    position: relative;
+
+
+}
+.showcase h1{
+    font-size: 40px;
+    }
+.showcase p{
+        margin: 20px 0;
+        }
+ .showcase .grid{
+     overflow: visible;
+     grid-template-columns: 55% 45%;
+     gap: 30px;
+ }   
+
+ .showcase-form{
+      position: relative;
+      top: 60px;
+      height: 350px;
+      width: 400px;
+      padding: 40px;
+      z-index: 100 ;
+ }
+
+ .showcase-form .form-control{
+     margin: 30px;
+
+ }
+ 
+ .showcase-form input[type='text'],
+ .showcase-form input[type='email']{
+     border: 0;
+     border-bottom: 1px solid #b4becb;
+     width: 100%;
+     padding: 3px;
+     font-size: 16px;
+
+ }
+
+ .showcase-form input:focus{
+     outline: none;
+ }
+
+ .showcase::before, 
+ .showcase::after{
+     content: '';
+     position: absolute;
+     height: 100px;
+     bottom: -70px;
+     right: 0;
+     left: 0;
+     background: #fff;
+     transform: skewY(-3deg);
+     -webkit-transform: skewY(-3deg);
+     -moz-transform: skewY(-3deg);
+     -ms-transform: skewY(-3deg);
+
+ }
+ /*stats*/
+ .stats{
+     padding-top: 100px;
+ }
+
+ .stats-heading{
+     max-width: 500px;
+     margin: auto;
+ }
+
+ .stats .grid h3{
+     font-size: 35px;
+ }
+
+ .stats .grid p{
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ /*gurutech*/
+ .cli .grid{
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+ }
+.cli .grid >*:first-child{
+    grid-column:1 / span 2 ;
+    grid-row: 1 / span 2;
+}
+
+/*cloud*/
+
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+/*Languages*/
+.services .flex{
+    flex-wrap: wrap;
+}
+.services .card{
+    text-align: center;
+    margin: 18px 10px 10px;
+    transition:transform 0.2s ease-in;
+}
+.services .card h4{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.services .card:hover{
+    transform: translateY(-15px);
+}
+
+/*footer*/
+.footer .social a{
+    margin: 0 10px;
+}
+
+/*Tablets and under*/
+@media(max-width: 768px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase{
+        height: auto;
+    }
+    .showcase-text{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+    }
+    .cli .grid >*:first-child{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+
+}
+/*Mobile*/
+@media(max-width: 500px){
+    .navbar .flex{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+
+/*ABOUT US Componentsts*/
+
+.clia .grid{
+    background-color: #047aed;
+    grid-template-columns: 20%  80%;
+    grid-template-rows: repeat(1, 1fr);
+    
+}
+.clia .grid >*:first-child{
+    grid-column:1 ;
+    grid-row: 1 ;
+   text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.clia h3{
+    font-size: 16px;
+}
+.clia h2{
+    font-size: 20px;
+}
+.servicesa{
+    margin-top: 0px;
+    background-color: #047aed;
+}
+.servicesa .flex{
+    flex-wrap: wrap;
+
+}
+.servicesa .card{
+    text-align: center;
+    margin: 18px 10px 10px;
+    transition:transform 0.2s ease-in;
+}
+.servicesa .card h4{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.servicesa img:hover{
+    width: 250px;
+    height: 350px;
+    
+}
+
+.servicesa img{
+    width: 150px;
+    height: 200px;
+}
+.servicesa h2{
+    font-size: 30px;
+    color: #fff;
+}
+
